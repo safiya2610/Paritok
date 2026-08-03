@@ -126,16 +126,3 @@ The backend Paritok API (`gitingest-api`) is pre-configured for automated deploy
    - **Start Command**: `uvicorn gitingest-api.main:app --host 0.0.0.0 --port $PORT`
 4. Deploy! Render will expose a URL (e.g. `https://paritok-api.onrender.com`). You can point your frontend to this API to handle codebase ingestion.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-<div align="center">
-Made with ❤️
-</div>
