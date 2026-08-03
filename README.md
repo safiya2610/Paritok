@@ -25,7 +25,7 @@
 - **Clean Minimalist UI**: Built with a sleek, structural, Vercel-inspired flat aesthetic.
 - **Smart Context Selection**: Automatically drills down from hundreds of files to just the relevant few.
 
-## 🏗 Architecture & APIs
+## Architecture & APIs
 
 Paritok leverages modern serverless architecture and advanced LLM APIs:
 
@@ -95,6 +95,3 @@ Navigate to `http://localhost:3000`
 
 ---
 
-<div align="center">
-Made with ❤️
-</div>
