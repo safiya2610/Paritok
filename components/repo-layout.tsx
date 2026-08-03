@@ -1,0 +1,91 @@
+"use client"
+
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable"
+import { Suspense, useState } from "react"
+import FileExplorer from "@/components/file-explorer"
+import AiAssistant from "@/components/ai-assistant"
+import FileViewer from "@/components/file-viewer"
+import RepoAnalyzer from "@/components/repo-analyzer"
+import { Skeleton } from "@/components/ui/skeleton"
+import { cn } from "@/lib/utils"
+
+interface RepoLayoutProps {
+    repoData: any
+    username: string
+    repo: string
+}
+
+export default function RepoLayout({ repoData, username, repo }: RepoLayoutProps) {
+    const [isLeftCollapsed, setIsLeftCollapsed] = useState(false)
+    const [isRightCollapsed, setIsRightCollapsed] = useState(false)
+
+    return (
+        <div className="h-screen bg-background text-foreground font-sans overflow-hidden relative">
+            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+            </div>
+            <ResizablePanelGroup direction="horizontal" className="h-full w-full rounded-lg border-border relative z-10">
+
+                {/* Left Sidebar - File Explorer */}
+                <ResizablePanel
+                    defaultSize={20}
+                    minSize={15}
+                    maxSize={30}
+                    collapsible={true}
+                    onCollapse={() => setIsLeftCollapsed(true)}
+                    onExpand={() => setIsLeftCollapsed(false)}
+                    className={cn(isLeftCollapsed && "min-w-[50px] transition-all duration-300 ease-in-out")}
+                >
+                    <div className="h-full flex flex-col border-r border-border bg-card z-10 relative">
+                        <Suspense
+                            fallback={
+                                <div className="p-4">
+                                    <Skeleton className="h-[500px] bg-muted" />
+                                </div>
+                            }
+                        >
+                            <FileExplorer repoData={repoData} />
+                        </Suspense>
+                    </div>
+                </ResizablePanel>
+
+                <ResizableHandle withHandle />
+
+                {/* Middle - File Viewer */}
+                <ResizablePanel defaultSize={50} minSize={30}>
+                    <div className="flex flex-col h-full min-w-0 z-10 relative bg-background">
+                        <RepoAnalyzer username={username} repo={repo} />
+                        <div className="flex-1 overflow-hidden border-r border-border">
+                            <Suspense
+                                fallback={
+                                    <div className="p-4">
+                                        <Skeleton className="h-[500px] bg-muted" />
+                                    </div>
+                                }
+                            >
+                                <FileViewer repoData={repoData} />
+                            </Suspense>
+                        </div>
+                    </div>
+                </ResizablePanel>
+
+                <ResizableHandle withHandle />
+
+                {/* Right - AI Assistant */}
+                <ResizablePanel
+                    defaultSize={30}
+                    minSize={20}
+                    maxSize={50}
+                    collapsible={true}
+                    onCollapse={() => setIsRightCollapsed(true)}
+                    onExpand={() => setIsRightCollapsed(false)}
+                >
+                    <div className="h-full flex flex-col min-w-0">
+                        <AiAssistant username={username} repo={repo} />
+                    </div>
+                </ResizablePanel>
+
+            </ResizablePanelGroup>
+        </div>
+    )
+}
