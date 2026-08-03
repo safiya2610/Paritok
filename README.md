@@ -1,9 +1,8 @@
 <div align="center">
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/1c3934fd-1dec-4516-90f7-267288f52805" alt="AnswerGit" />
+ <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/082898d5-b731-4d0d-818d-1df89a7231db" />
 </p>
-
-# Paritok: Build Smarter with Token-Efficient AI 🤖
+# Paritok: Build Smarter with Token-Efficient AI 
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.2.4-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.0.0-blue?style=flat-square&logo=react)](https://reactjs.org/)
@@ -11,20 +10,20 @@
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.17-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 
-🚀 AI-Powered GitHub Repository Explorer & PR Reviewer | Understand codebases instantly with AI-driven insights
+ AI-Powered GitHub Repository Explorer & PR Reviewer | Understand codebases instantly with AI-driven insights
 
 [Features](#features) • [Architecture & APIs](#architecture--apis) • [Installation](#installation) • [Usage](#usage)
 
 </div>
 
-## 🌟 Features
+## Features
 
-- 🧠 **AI Context Optimizer**: Intelligently removes duplicates, noise, and irrelevant files before sending data to the LLM using Paritok compression.
-- 💬 **AI Codebase Chat Assistant**: Chat directly with any GitHub repository. Ask questions, explore logic, and get generated tests in an instant.
-- 👀 **Automated PR Reviewer**: Paste a GitHub PR URL or Raw Diff and instantly receive an AI review summarizing Bugs, Security Issues, Performance Improvements, Code Smells, and an Overall Score.
-- 📊 **Token Replay & Optimization Metrics**: See exactly how many tokens were saved, cost reduced, and latency improved when using Paritok compression.
-- 🖥️ **Clean Minimalist UI**: Built with a sleek, structural, Vercel-inspired flat aesthetic.
-- 🎯 **Smart Context Selection**: Automatically drills down from hundreds of files to just the relevant few.
+- **AI Context Optimizer**: Intelligently removes duplicates, noise, and irrelevant files before sending data to the LLM using Paritok compression.
+- **AI Codebase Chat Assistant**: Chat directly with any GitHub repository. Ask questions, explore logic, and get generated tests in an instant.
+- **Automated PR Reviewer**: Paste a GitHub PR URL or Raw Diff and instantly receive an AI review summarizing Bugs, Security Issues, Performance Improvements, Code Smells, and an Overall Score.
+- **Token Replay & Optimization Metrics**: See exactly how many tokens were saved, cost reduced, and latency improved when using Paritok compression.
+- **Clean Minimalist UI**: Built with a sleek, structural, Vercel-inspired flat aesthetic.
+- **Smart Context Selection**: Automatically drills down from hundreds of files to just the relevant few.
 
 ## 🏗 Architecture & APIs
 
@@ -43,7 +42,7 @@ Paritok leverages modern serverless architecture and advanced LLM APIs:
    - Relies heavily on models like `gemini-3.5-flash` and `gemini-2.5-pro` for fast, intelligent code comprehension. 
    - Uses strict JSON structured prompting to guarantee parseable PR review outputs.
 
-## 🚀 Installation
+##  Installation
 
 1. **Clone the repository**
 ```bash
@@ -72,7 +71,7 @@ GEMINI_API_KEY_SECONDARY=your_secondary_gemini_api_key
 GITHUB_TOKEN=your_github_token
 ```
 
-## 🚀 Usage
+## Usage
 
 1. **Start the development server**
 ```bash
@@ -93,13 +92,6 @@ Navigate to `http://localhost:3000`
 - Toggle **Use Paritok Optimization** to save tokens.
 - Instantly review identified Bugs, Security Risks, Performance Improvements, and Code Smells!
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
