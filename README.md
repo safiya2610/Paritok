@@ -1,4 +1,4 @@
-## ContextPilot AI
+### ContextPilot AI
 <div align="center">
 <p align="center">
  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/082898d5-b731-4d0d-818d-1df89a7231db" />
